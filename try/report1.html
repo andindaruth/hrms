@@ -1,0 +1,671 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Vehicle Data</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin-left: 20%;
+        }
+
+        h3 {
+            margin-left: 20%;
+        }
+
+        .active {
+            background-color: blue;
+            color: white;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 5px;
+            text-align: left;
+        }
+
+        th.rotate {
+            max-width: 50px;
+        }
+
+        .bold-row td,
+        .bold-column {
+            font-weight: bold;
+        }
+
+        .bold-june-july {
+            border-right: 2px solid black;
+        }
+
+        .bold-june-july-column {
+            border-left: 2px solid black;
+        }
+
+        .highlight-yellowgreen {
+            background-color: yellowgreen;
+        }
+
+        .bold-line td {
+            border-bottom: 2px solid black;
+        }
+
+        /* Highlight the last row */
+        .last-row td {
+            background-color: yellowgreen;
+        }
+        .last-column {
+            background-color: yellowgreen;
+            font-weight: bold;
+        }
+        .subtotal td,
+        .bold-season {
+            font-weight: bold;
+        }
+        .bold-jul-dec {
+            font-weight: bold;
+        }
+        .overall-column {
+            font-weight: bold;
+        }
+        .highlight-subtotal {
+            background-color: yellow;
+        }
+        .highlight-orange {
+            background-color: orange;
+        }
+        .year-select {
+            margin-left: 90%;
+        }
+    </style>
+</head>
+<body>
+
+
+<!-- table to display detailed fuel consumption data -->
+
+<h3>
+    <label for="year">Select Reporting Year</label>
+<select class="year-select">
+        <option value='2024'>2024</option><option value='2023'>2023</option><option value='2022'>2022</option><option value='2021'>2021</option><option value='2020'>2020</option><option value='2019'>2019</option>    </select>
+</h3>
+    
+<table class="detail">
+    <tr>
+        <th colspan ="16"><h3>Summary Report of fuel Consumption for each Vehicle per Month and per Season for year :2024 </h3></th>
+    </tr>
+    <tr>
+        <th></th>
+        <th colspan="12">Months</th>
+        <th colspan="3">Total per Vehicle </th>
+    </tr>
+    <tr>
+        <th>Vehicle</th>
+                    <th class="rotate ">Jan</th>
+                    <th class="rotate ">Feb</th>
+                    <th class="rotate ">Mar</th>
+                    <th class="rotate ">Apr</th>
+                    <th class="rotate ">May</th>
+                    <th class="rotate bold-june-july">Jun</th>
+                    <th class="rotate ">Jul</th>
+                    <th class="rotate ">Aug</th>
+                    <th class="rotate ">Sep</th>
+                    <th class="rotate ">Oct</th>
+                    <th class="rotate ">Nov</th>
+                    <th class="rotate ">Dec</th>
+                <th class="bold-column">Season A (Jan-Jun)</th>
+        <th class="bold-season">Season B (Jul-Dec)</th>
+        <th class="last-column overall-column">Overall (Jan-Dec)</th>
+    </tr>
+
+            <tr>
+            <td>UBA227W/JD5075E</td>
+                            <td class="">74</td>
+                            <td class="">11</td>
+                            <td class="">68</td>
+                            <td class="">87</td>
+                            <td class="">37</td>
+                            <td class="">68</td>
+                            <td class="bold-june-july-column">61</td>
+                            <td class="">71</td>
+                            <td class="">5</td>
+                            <td class="">59</td>
+                            <td class="">36</td>
+                            <td class="">75</td>
+                        <td class="bold-column">345</td>
+            <td class="bold-jul-dec">307</td>
+            <td class="last-column">652</td>
+        </tr>
+                    <tr>
+            <td>UAW178Y/JD6100B</td>
+                            <td class="">53</td>
+                            <td class="">61</td>
+                            <td class="">65</td>
+                            <td class="">19</td>
+                            <td class="">41</td>
+                            <td class="">44</td>
+                            <td class="bold-june-july-column">56</td>
+                            <td class="">8</td>
+                            <td class="">37</td>
+                            <td class="">70</td>
+                            <td class="">91</td>
+                            <td class="">1</td>
+                        <td class="bold-column">283</td>
+            <td class="bold-jul-dec">263</td>
+            <td class="last-column">546</td>
+        </tr>
+                    <tr>
+            <td>UAV851F/JD5503</td>
+                            <td class="">79</td>
+                            <td class="">67</td>
+                            <td class="">79</td>
+                            <td class="">40</td>
+                            <td class="">25</td>
+                            <td class="">49</td>
+                            <td class="bold-june-july-column">84</td>
+                            <td class="">30</td>
+                            <td class="">9</td>
+                            <td class="">47</td>
+                            <td class="">47</td>
+                            <td class="">3</td>
+                        <td class="bold-column">339</td>
+            <td class="bold-jul-dec">220</td>
+            <td class="last-column">559</td>
+        </tr>
+                    <tr>
+            <td>UAV746F/JD6125D</td>
+                            <td class="">5</td>
+                            <td class="">22</td>
+                            <td class="">86</td>
+                            <td class="">60</td>
+                            <td class="">94</td>
+                            <td class="">47</td>
+                            <td class="bold-june-july-column">87</td>
+                            <td class="">63</td>
+                            <td class="">81</td>
+                            <td class="">30</td>
+                            <td class="">41</td>
+                            <td class="">60</td>
+                        <td class="bold-column">314</td>
+            <td class="bold-jul-dec">362</td>
+            <td class="last-column">676</td>
+        </tr>
+                    <tr>
+            <td>UAZ149Y/JD6125D</td>
+                            <td class="">99</td>
+                            <td class="">37</td>
+                            <td class="">67</td>
+                            <td class="">61</td>
+                            <td class="">31</td>
+                            <td class="">31</td>
+                            <td class="bold-june-july-column">93</td>
+                            <td class="">76</td>
+                            <td class="">90</td>
+                            <td class="">26</td>
+                            <td class="">46</td>
+                            <td class="">40</td>
+                        <td class="bold-column">326</td>
+            <td class="bold-jul-dec">371</td>
+            <td class="last-column">697</td>
+        </tr>
+                    <tr>
+            <td>UAT358R/JD5503</td>
+                            <td class="">19</td>
+                            <td class="">11</td>
+                            <td class="">25</td>
+                            <td class="">73</td>
+                            <td class="">86</td>
+                            <td class="">75</td>
+                            <td class="bold-june-july-column">18</td>
+                            <td class="">98</td>
+                            <td class="">63</td>
+                            <td class="">83</td>
+                            <td class="">12</td>
+                            <td class="">27</td>
+                        <td class="bold-column">289</td>
+            <td class="bold-jul-dec">301</td>
+            <td class="last-column">590</td>
+        </tr>
+                    <tr>
+            <td>NEW290MF</td>
+                            <td class="">36</td>
+                            <td class="">44</td>
+                            <td class="">57</td>
+                            <td class="">72</td>
+                            <td class="">72</td>
+                            <td class="">40</td>
+                            <td class="bold-june-july-column">50</td>
+                            <td class="">51</td>
+                            <td class="">13</td>
+                            <td class="">58</td>
+                            <td class="">41</td>
+                            <td class="">4</td>
+                        <td class="bold-column">321</td>
+            <td class="bold-jul-dec">217</td>
+            <td class="last-column">538</td>
+        </tr>
+                    <tr>
+            <td>OLD290MF</td>
+                            <td class="">68</td>
+                            <td class="">88</td>
+                            <td class="">11</td>
+                            <td class="">21</td>
+                            <td class="">42</td>
+                            <td class="">44</td>
+                            <td class="bold-june-july-column">28</td>
+                            <td class="">81</td>
+                            <td class="">0</td>
+                            <td class="">17</td>
+                            <td class="">68</td>
+                            <td class="">53</td>
+                        <td class="bold-column">274</td>
+            <td class="bold-jul-dec">247</td>
+            <td class="last-column">521</td>
+        </tr>
+                    <tr>
+            <td>UBB904D</td>
+                            <td class="">23</td>
+                            <td class="">3</td>
+                            <td class="">26</td>
+                            <td class="">70</td>
+                            <td class="">91</td>
+                            <td class="">86</td>
+                            <td class="bold-june-july-column">49</td>
+                            <td class="">51</td>
+                            <td class="">18</td>
+                            <td class="">71</td>
+                            <td class="">56</td>
+                            <td class="">15</td>
+                        <td class="bold-column">299</td>
+            <td class="bold-jul-dec">260</td>
+            <td class="last-column">559</td>
+        </tr>
+                    <tr>
+            <td>UBM 902T</td>
+                            <td class="">62</td>
+                            <td class="">88</td>
+                            <td class="">61</td>
+                            <td class="">0</td>
+                            <td class="">76</td>
+                            <td class="">15</td>
+                            <td class="bold-june-july-column">79</td>
+                            <td class="">69</td>
+                            <td class="">95</td>
+                            <td class="">62</td>
+                            <td class="">34</td>
+                            <td class="">3</td>
+                        <td class="bold-column">302</td>
+            <td class="bold-jul-dec">342</td>
+            <td class="last-column">644</td>
+        </tr>
+                    <tr>
+            <td>UBM 901T</td>
+                            <td class="">49</td>
+                            <td class="">39</td>
+                            <td class="">83</td>
+                            <td class="">41</td>
+                            <td class="">86</td>
+                            <td class="">7</td>
+                            <td class="bold-june-july-column">18</td>
+                            <td class="">63</td>
+                            <td class="">99</td>
+                            <td class="">34</td>
+                            <td class="">24</td>
+                            <td class="">3</td>
+                        <td class="bold-column">305</td>
+            <td class="bold-jul-dec">241</td>
+            <td class="last-column">546</td>
+        </tr>
+                    <tr>
+            <td>UBP 634J/UBP207Q</td>
+                            <td class="">0</td>
+                            <td class="">41</td>
+                            <td class="">15</td>
+                            <td class="">83</td>
+                            <td class="">22</td>
+                            <td class="">56</td>
+                            <td class="bold-june-july-column">55</td>
+                            <td class="">96</td>
+                            <td class="">5</td>
+                            <td class="">100</td>
+                            <td class="">0</td>
+                            <td class="">32</td>
+                        <td class="bold-column">217</td>
+            <td class="bold-jul-dec">288</td>
+            <td class="last-column">505</td>
+        </tr>
+                    <tr>
+            <td>COMBINE</td>
+                            <td class="">66</td>
+                            <td class="">78</td>
+                            <td class="">90</td>
+                            <td class="">1</td>
+                            <td class="">60</td>
+                            <td class="">23</td>
+                            <td class="bold-june-july-column">95</td>
+                            <td class="">48</td>
+                            <td class="">37</td>
+                            <td class="">1</td>
+                            <td class="">5</td>
+                            <td class="">75</td>
+                        <td class="bold-column">318</td>
+            <td class="bold-jul-dec">261</td>
+            <td class="last-column">579</td>
+        </tr>
+                    <tr>
+            <td>UBH 547TMACCOR</td>
+                            <td class="">99</td>
+                            <td class="">27</td>
+                            <td class="">3</td>
+                            <td class="">70</td>
+                            <td class="">87</td>
+                            <td class="">28</td>
+                            <td class="bold-june-july-column">79</td>
+                            <td class="">95</td>
+                            <td class="">54</td>
+                            <td class="">78</td>
+                            <td class="">49</td>
+                            <td class="">98</td>
+                        <td class="bold-column">314</td>
+            <td class="bold-jul-dec">453</td>
+            <td class="last-column">767</td>
+        </tr>
+                    <tr class="subtotal highlight-subtotal">
+                <td><b>Subtotal (category)</b></td>
+                                    <td class="highlight-subtotal">567</td>
+                                    <td class="highlight-subtotal">512</td>
+                                    <td class="highlight-subtotal">643</td>
+                                    <td class="highlight-subtotal">627</td>
+                                    <td class="highlight-subtotal">703</td>
+                                    <td class="highlight-subtotal">562</td>
+                                    <td class="highlight-subtotal">678</td>
+                                    <td class="highlight-subtotal">757</td>
+                                    <td class="highlight-subtotal">515</td>
+                                    <td class="highlight-subtotal">657</td>
+                                    <td class="highlight-subtotal">496</td>
+                                    <td class="highlight-subtotal">316</td>
+                                <td class="highlight-subtotal">3614</td>
+                <td class="highlight-subtotal">3419</td>
+                <td class="highlight-subtotal">7033</td>
+            </tr>
+                    <tr>
+            <td>ISUZU</td>
+                            <td class="">43</td>
+                            <td class="">8</td>
+                            <td class="">34</td>
+                            <td class="">53</td>
+                            <td class="">73</td>
+                            <td class="">49</td>
+                            <td class="bold-june-july-column">79</td>
+                            <td class="">19</td>
+                            <td class="">88</td>
+                            <td class="">89</td>
+                            <td class="">55</td>
+                            <td class="">4</td>
+                        <td class="bold-column">260</td>
+            <td class="bold-jul-dec">334</td>
+            <td class="last-column">594</td>
+        </tr>
+                    <tr>
+            <td>CANTER</td>
+                            <td class="">76</td>
+                            <td class="">19</td>
+                            <td class="">46</td>
+                            <td class="">32</td>
+                            <td class="">39</td>
+                            <td class="">58</td>
+                            <td class="bold-june-july-column">0</td>
+                            <td class="">91</td>
+                            <td class="">13</td>
+                            <td class="">46</td>
+                            <td class="">13</td>
+                            <td class="">26</td>
+                        <td class="bold-column">270</td>
+            <td class="bold-jul-dec">189</td>
+            <td class="last-column">459</td>
+        </tr>
+                    <tr>
+            <td>TATA</td>
+                            <td class="">0</td>
+                            <td class="">21</td>
+                            <td class="">56</td>
+                            <td class="">8</td>
+                            <td class="">71</td>
+                            <td class="">13</td>
+                            <td class="bold-june-july-column">17</td>
+                            <td class="">21</td>
+                            <td class="">58</td>
+                            <td class="">21</td>
+                            <td class="">29</td>
+                            <td class="">74</td>
+                        <td class="bold-column">169</td>
+            <td class="bold-jul-dec">220</td>
+            <td class="last-column">389</td>
+        </tr>
+                    <tr>
+            <td>SCANIA</td>
+                            <td class="">93</td>
+                            <td class="">88</td>
+                            <td class="">49</td>
+                            <td class="">69</td>
+                            <td class="">2</td>
+                            <td class="">65</td>
+                            <td class="bold-june-july-column">33</td>
+                            <td class="">62</td>
+                            <td class="">54</td>
+                            <td class="">10</td>
+                            <td class="">49</td>
+                            <td class="">9</td>
+                        <td class="bold-column">366</td>
+            <td class="bold-jul-dec">217</td>
+            <td class="last-column">583</td>
+        </tr>
+                    <tr>
+            <td>CRANE Hired truck</td>
+                            <td class="">47</td>
+                            <td class="">24</td>
+                            <td class="">29</td>
+                            <td class="">79</td>
+                            <td class="">63</td>
+                            <td class="">2</td>
+                            <td class="bold-june-july-column">49</td>
+                            <td class="">64</td>
+                            <td class="">83</td>
+                            <td class="">52</td>
+                            <td class="">73</td>
+                            <td class="">98</td>
+                        <td class="bold-column">244</td>
+            <td class="bold-jul-dec">419</td>
+            <td class="last-column">663</td>
+        </tr>
+                    <tr>
+            <td>UAE 200M</td>
+                            <td class="">18</td>
+                            <td class="">91</td>
+                            <td class="">26</td>
+                            <td class="">51</td>
+                            <td class="">31</td>
+                            <td class="">71</td>
+                            <td class="bold-june-july-column">49</td>
+                            <td class="">67</td>
+                            <td class="">99</td>
+                            <td class="">70</td>
+                            <td class="">87</td>
+                            <td class="">13</td>
+                        <td class="bold-column">288</td>
+            <td class="bold-jul-dec">385</td>
+            <td class="last-column">673</td>
+        </tr>
+                    <tr>
+            <td>UAW 490K</td>
+                            <td class="">24</td>
+                            <td class="">35</td>
+                            <td class="">73</td>
+                            <td class="">71</td>
+                            <td class="">6</td>
+                            <td class="">56</td>
+                            <td class="bold-june-july-column">40</td>
+                            <td class="">37</td>
+                            <td class="">34</td>
+                            <td class="">3</td>
+                            <td class="">81</td>
+                            <td class="">13</td>
+                        <td class="bold-column">265</td>
+            <td class="bold-jul-dec">208</td>
+            <td class="last-column">473</td>
+        </tr>
+                    <tr>
+            <td>BULL/BACKHOE</td>
+                            <td class="">21</td>
+                            <td class="">9</td>
+                            <td class="">57</td>
+                            <td class="">41</td>
+                            <td class="">32</td>
+                            <td class="">75</td>
+                            <td class="bold-june-july-column">1</td>
+                            <td class="">45</td>
+                            <td class="">80</td>
+                            <td class="">80</td>
+                            <td class="">1</td>
+                            <td class="">27</td>
+                        <td class="bold-column">235</td>
+            <td class="bold-jul-dec">234</td>
+            <td class="last-column">469</td>
+        </tr>
+                    <tr>
+            <td>OTHERS/Mixture</td>
+                            <td class="">69</td>
+                            <td class="">25</td>
+                            <td class="">56</td>
+                            <td class="">97</td>
+                            <td class="">77</td>
+                            <td class="">64</td>
+                            <td class="bold-june-july-column">22</td>
+                            <td class="">1</td>
+                            <td class="">61</td>
+                            <td class="">42</td>
+                            <td class="">93</td>
+                            <td class="">86</td>
+                        <td class="bold-column">388</td>
+            <td class="bold-jul-dec">305</td>
+            <td class="last-column">693</td>
+        </tr>
+                    <tr>
+            <td>Excavator</td>
+                            <td class="">33</td>
+                            <td class="">56</td>
+                            <td class="">25</td>
+                            <td class="">77</td>
+                            <td class="">35</td>
+                            <td class="">7</td>
+                            <td class="bold-june-july-column">32</td>
+                            <td class="">18</td>
+                            <td class="">78</td>
+                            <td class="">88</td>
+                            <td class="">67</td>
+                            <td class="">66</td>
+                        <td class="bold-column">233</td>
+            <td class="bold-jul-dec">349</td>
+            <td class="last-column">582</td>
+        </tr>
+                    <tr class="subtotal highlight-subtotal">
+                <td><b>Subtotal (category)</b></td>
+                                    <td class="highlight-subtotal">567</td>
+                                    <td class="highlight-subtotal">512</td>
+                                    <td class="highlight-subtotal">643</td>
+                                    <td class="highlight-subtotal">627</td>
+                                    <td class="highlight-subtotal">703</td>
+                                    <td class="highlight-subtotal">562</td>
+                                    <td class="highlight-subtotal">678</td>
+                                    <td class="highlight-subtotal">757</td>
+                                    <td class="highlight-subtotal">515</td>
+                                    <td class="highlight-subtotal">657</td>
+                                    <td class="highlight-subtotal">496</td>
+                                    <td class="highlight-subtotal">316</td>
+                                <td class="highlight-subtotal">3614</td>
+                <td class="highlight-subtotal">3419</td>
+                <td class="highlight-subtotal">7033</td>
+            </tr>
+                    <tr>
+            <td>TANGI FARM</td>
+                            <td class="">34</td>
+                            <td class="">32</td>
+                            <td class="">98</td>
+                            <td class="">54</td>
+                            <td class="">54</td>
+                            <td class="">15</td>
+                            <td class="bold-june-july-column">36</td>
+                            <td class="">25</td>
+                            <td class="">12</td>
+                            <td class="">75</td>
+                            <td class="">92</td>
+                            <td class="">8</td>
+                        <td class="bold-column">287</td>
+            <td class="bold-jul-dec">248</td>
+            <td class="last-column">535</td>
+        </tr>
+                    <tr>
+            <td>GENERATOR</td>
+                            <td class="">41</td>
+                            <td class="">32</td>
+                            <td class="">51</td>
+                            <td class="">60</td>
+                            <td class="">83</td>
+                            <td class="">52</td>
+                            <td class="bold-june-july-column">62</td>
+                            <td class="">14</td>
+                            <td class="">93</td>
+                            <td class="">54</td>
+                            <td class="">22</td>
+                            <td class="">97</td>
+                        <td class="bold-column">319</td>
+            <td class="bold-jul-dec">342</td>
+            <td class="last-column">661</td>
+        </tr>
+                    <tr class="subtotal highlight-subtotal">
+                <td><b>Subtotal (category)</b></td>
+                                    <td class="highlight-subtotal">567</td>
+                                    <td class="highlight-subtotal">512</td>
+                                    <td class="highlight-subtotal">643</td>
+                                    <td class="highlight-subtotal">627</td>
+                                    <td class="highlight-subtotal">703</td>
+                                    <td class="highlight-subtotal">562</td>
+                                    <td class="highlight-subtotal">678</td>
+                                    <td class="highlight-subtotal">757</td>
+                                    <td class="highlight-subtotal">515</td>
+                                    <td class="highlight-subtotal">657</td>
+                                    <td class="highlight-subtotal">496</td>
+                                    <td class="highlight-subtotal">316</td>
+                                <td class="highlight-subtotal">3614</td>
+                <td class="highlight-subtotal">3419</td>
+                <td class="highlight-subtotal">7033</td>
+            </tr>
+            
+    <!-- Total per month row -->
+    <tr class="bold-row last-row">
+        <td>Total per month and per season</td>
+                    <td>1231</td>
+                    <td>1057</td>
+                    <td>1336</td>
+                    <td>1390</td>
+                    <td>1416</td>
+                    <td>1140</td>
+                    <td>1272</td>
+                    <td>1364</td>
+                    <td>1359</td>
+                    <td>1366</td>
+                    <td>1212</td>
+                    <td>1010</td>
+                <td class="highlight-orange bold-column">7570</td>
+        <td class="highlight-orange bold-jul-dec">7583</td>
+        <td class="highlight-orange last-column">15153</td>
+    </tr>
+</table>
+
+</body>
+</html>
